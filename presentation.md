@@ -131,6 +131,7 @@ p.name = "Kamil Piotr" {- no such syntax -}
 - or `main : Signal Html`
 - `foldp : (a -> state -> state) -> state -> Signal a -> Signal state`
 - `foldp` is similar to `foldr` or to `Array.prototype.reduce` from JS
+- [Signal operations](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Signal)
 
 --
 ### Elm architecture
@@ -158,7 +159,7 @@ p.name = "Kamil Piotr" {- no such syntax -}
 --
 ### Exercise
 
-- let's implement a ball that can kill Mario
+- let's implement a ball that Mario needs to avoid
 - [github.com/durkiewicz/mario-elm](https://github.com/durkiewicz/mario-elm)
 - branch master - copy / paste from [elm-lang.org/examples/mario](http://elm-lang.org/examples/mario)
 - branch mario-with-ball - proposition of a new model
