@@ -1,4 +1,4 @@
-title: ECMAScript 6
+title: Elm workshop
 author:
     name: Kamil Durkiewicz
     url: http://github.com/durkiewicz
@@ -20,20 +20,20 @@ controls: true
 public class Person {
     private final int age;
     private final String name;
-    
+
     public Person(final int age, final String name) {
         this.age = age;
         this.name = name;
     }
-    
+
     public int getAge() {
         return this.age;
     }
-    
+
     public String getName() {
         return this.name;
     }
-    
+
     @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
@@ -51,7 +51,7 @@ public class Person {
     public int hashCode() {
         return Objects.hash(this.age, this.name);
     }
-    
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("{");
@@ -75,7 +75,16 @@ But JS developers see these messages many times a day:
 - "cannot read property 'name' of null"
 - "object is not a function"
 
-And they are scared to refactor. Or they waste many days to do a simple refactor. 
+And they are scared to refactor. Or they waste many days to do a simple refactor.
+
+--
+### What alternatives do we have?
+
+- TypeScript
+- Dart
+- Scala.js
+- PureScript
+- Elm
 
 --
 ### What is Elm?
@@ -89,7 +98,7 @@ And they are scared to refactor. Or they waste many days to do a simple refactor
 
 - syntax similar to Haskell...
 - ...but conceptually closer to ML language family (SML, OCaml, F#)
-- typing: static, strong, inferred 
+- typing: static, strong, inferred
 - small but expressive set of language constructs
 - immutability
 - transpiled to JS
@@ -102,19 +111,16 @@ And they are scared to refactor. Or they waste many days to do a simple refactor
 --
 ### Missing language features
 
-- `null` / `undefined` / `NaN`
+- `null` / `undefined`
 - OOP-style classes
 - changing a value of anything
 ```
 x = 1
-x = 2 {- causes a compilation error -} 
+x = 2 {- causes a compilation error -}
 ```
 ```
 p = { name = "Kamil", age = 29 }
-p = { name = "Kamil Piotr", age = 29 } {- causes a compilation error -} 
-```
-```
-p = { name = "Kamil", age = 29 }
+p = { name = "Kamil Piotr", age = 29 } {- causes a compilation error -}
 p.name = "Kamil Piotr" {- no such syntax -}
 ```
 --
@@ -124,7 +130,7 @@ p.name = "Kamil Piotr" {- no such syntax -}
 - example `Mouse.position : Signal ( Int, Int )`
 - or `main : Signal Html`
 - `foldp : (a -> state -> state) -> state -> Signal a -> Signal state`
-- `foldp` is similar to `foldr` or to `Array.prototype.reduce` from JS 
+- `foldp` is similar to `foldr` or to `Array.prototype.reduce` from JS
 
 --
 ### Elm architecture
@@ -135,9 +141,19 @@ p.name = "Kamil Piotr" {- no such syntax -}
 --
 ### Advantages
 
-- Much easier refactoring
+- Much easier refactoring, no need to fear
 - Runtime errors are rare
 - Problem detection at CI can be very cheap
+- Well documented
+- Fast compiler
+- Easier then other functional languages
+- Fun to write
+
+--
+### Disadvantages
+
+- Parsing JSON requires much more code than `JSON.parse`
+- Requires about a week until you can be productive
 
 --
 ### Exercise
@@ -150,5 +166,6 @@ p.name = "Kamil Piotr" {- no such syntax -}
 --
 ### References
 
-- [http://elm-lang.org](http://elm-lang.org)
-- [https://github.com/rtfeldman/dreamwriter](https://github.com/rtfeldman/dreamwriter)
+- [elm-lang.org](http://elm-lang.org)
+- [github.com/rtfeldman/dreamwriter](https://github.com/rtfeldman/dreamwriter)
+- [github.com/evancz/elm-todomvc](https://github.com/evancz/elm-todomvc)

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>ECMAScript 6</title>
+  <title>Elm workshop</title>
   <style type="text/css">
     body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -470,6 +470,17 @@ pre .chunk {
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
+    <section class="slide-content"><h3 id="what-alternatives-do-we-have-">What alternatives do we have?</h3>
+<ul>
+<li>TypeScript</li>
+<li>Dart</li>
+<li>Scala.js</li>
+<li>PureScript</li>
+<li>Elm</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h3 id="what-is-elm-">What is Elm?</h3>
 <ul>
 <li>functional programming language</li>
@@ -478,39 +489,38 @@ pre .chunk {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-7">
+  <div class="slide hidden" id="slide-8">
     <section class="slide-content"><h3 id="language-features">Language features</h3>
 <ul>
 <li>syntax similar to Haskell...</li>
 <li>...but conceptually closer to ML language family (SML, OCaml, F#)</li>
-<li>typing: static, strong, inferred </li>
+<li>typing: static, strong, inferred</li>
 <li>small but expressive set of language constructs</li>
 <li>immutability</li>
 <li>transpiled to JS</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
+  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h3 id="syntax">Syntax</h3>
 <p><a href="http://elm-lang.org/docs/syntax"><a href="http://elm-lang.org/docs/syntax">http://elm-lang.org/docs/syntax</a></a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="missing-language-features">Missing language features</h3>
 <ul>
-<li><code>null</code> / <code>undefined</code> / <code>NaN</code></li>
+<li><code>null</code> / <code>undefined</code></li>
 <li>OOP-style classes</li>
 <li>changing a value of anything<pre><code>x = 1
 x = 2 {- causes a compilation error -}</code></pre>
 <pre><code>p = { name = &quot;Kamil&quot;, age = 29 }
-p = { name = &quot;Kamil Piotr&quot;, age = 29 } {- causes a compilation error -}</code></pre>
-<pre><code>p = { name = &quot;Kamil&quot;, age = 29 }
+p = { name = &quot;Kamil Piotr&quot;, age = 29 } {- causes a compilation error -}
 p.name = &quot;Kamil Piotr&quot; {- no such syntax -}</code></pre>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="signals">Signals</h3>
 <ul>
 <li>A signal is a value that changes over time.</li>
@@ -521,7 +531,7 @@ p.name = &quot;Kamil Piotr&quot; {- no such syntax -}</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="elm-architecture">Elm architecture</h3>
 <ul>
 <li>there&#39;s a separate <a href="https://github.com/evancz/elm-architecture-tutorial/">article</a> about it</li>
@@ -529,16 +539,28 @@ p.name = &quot;Kamil Piotr&quot; {- no such syntax -}</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-13">
     <section class="slide-content"><h3 id="advantages">Advantages</h3>
 <ul>
-<li>Much easier refactoring</li>
+<li>Much easier refactoring, no need to fear</li>
 <li>Runtime errors are rare</li>
 <li>Problem detection at CI can be very cheap</li>
+<li>Well documented</li>
+<li>Fast compiler</li>
+<li>Easier then other functional languages</li>
+<li>Fun to write</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Parsing JSON requires much more code than <code>JSON.parse</code></li>
+<li>Requires about a week until you can be productive</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="exercise">Exercise</h3>
 <ul>
 <li>let&#39;s implement a ball that can kill Mario</li>
@@ -548,15 +570,16 @@ p.name = &quot;Kamil Piotr&quot; {- no such syntax -}</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="references">References</h3>
 <ul>
-<li><a href="http://elm-lang.org"><a href="http://elm-lang.org">http://elm-lang.org</a></a></li>
-<li><a href="https://github.com/rtfeldman/dreamwriter"><a href="https://github.com/rtfeldman/dreamwriter">https://github.com/rtfeldman/dreamwriter</a></a></li>
+<li><a href="http://elm-lang.org">elm-lang.org</a></li>
+<li><a href="https://github.com/rtfeldman/dreamwriter">github.com/rtfeldman/dreamwriter</a></li>
+<li><a href="https://github.com/evancz/elm-todomvc">github.com/evancz/elm-todomvc</a></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><div class="author">
   <h1 class="name">Kamil Durkiewicz</h1>
     <h3 class="url">
