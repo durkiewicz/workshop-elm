@@ -149,6 +149,7 @@ p.name = "Kamil Piotr" {- no such syntax -}
 - Fast compiler
 - Easier then other functional languages
 - Fun to write
+- [Performance](http://elm-lang.org/blog/blazing-fast-html)
 
 --
 ### Disadvantages
